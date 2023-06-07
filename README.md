@@ -1,2 +1,2 @@
 # ava-s-makeover
-It is a 2d game created using renpy
+It is a 2d game about unconscious biases created using renpy.
