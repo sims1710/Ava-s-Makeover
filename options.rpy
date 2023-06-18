@@ -1,4 +1,4 @@
-﻿## This file contains options that can be changed to customize your game.
+## This file contains options that can be changed to customize your game.
 ##
 ## Lines beginning with two '#' marks are comments, and you shouldn't uncomment
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
@@ -18,7 +18,7 @@ define config.name = _("Ava Makeover")
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
@@ -45,7 +45,7 @@ define build.name = "AvaMakeover"
 ## These three variables control, among other things, which mixers are shown
 ## to the player by default. Setting one of these to False will hide the
 ## appropriate mixer.
-
+define config.main_menu_music = "Feel-Good.mp3"
 define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
@@ -207,3 +207,4 @@ init python:
 ## by a slash.
 
 # define build.itch_project = "renpytom/test-project"
+
