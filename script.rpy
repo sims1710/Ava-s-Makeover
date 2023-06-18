@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the name of the character.
 
@@ -16,7 +16,21 @@ define an = Character("Andrew")
 
 label start:
 
+    play music "Roa-Innocence.mp3" fadeout 1
+
+    $ renpy.movie_cutscene("Ava's Makeover Extras.webm")
+
+    scene synopsis
+    with Dissolve(.5)
+
+    pause 20
+
     #Introduction of characters sequence
+
+    scene chapter 1
+    with Dissolve(.5)
+
+    pause 6
 
     #Need a description sequence.
 
@@ -287,6 +301,10 @@ label start:
     label main_conflict:
 
         #start of main focus
+        scene chapter 2
+        with Dissolve(.5)
+
+        pause 6
 
         scene classroom a st2 day
         with Dissolve(.5)
@@ -384,8 +402,19 @@ label start:
         label old_friends_route:
 
             #Start of old friends' route
+            scene chapter 3
+            with Dissolve(.5)
+
+            pause 6
+
+            scene school a s4st2 day
+            with Dissolve(.5)
+
+            show ava normal
 
             av "Since I am more comfortable with my friends and we know each other's strengths and weaknesses, I'd rather join them."
+
+            pause(.5)
 
             show text "You have currently made a decision based on an unconscious bias known as Familiarity Bias! This bias stems from the innate human tendency to seek familiarity and safety in our social interactions." at top
             with dissolve
@@ -486,6 +515,10 @@ label start:
             "As she relaxes at home that night, she is very unaware of how things will be turning out the next day!"
 
             pause(.5)
+
+            stop music fadeout 1
+
+            play music "Unseen-Horrors.mp3" fadeout 2
 
             #start of conflict
 
@@ -590,6 +623,15 @@ label start:
             hide clarissa serious
             hide ava sad
 
+            stop music fadeout 1
+
+            play music "Sovereign.mp3"
+
+            scene chapter 4
+            with Dissolve(.5)
+
+            pause 6
+
             scene school a s1st2 evening
             with Dissolve(.5)
 
@@ -655,6 +697,11 @@ label start:
             "They then decide to confront Andrew and Sia with the evidence they have."
 
             pause(.5)
+
+            scene chapter 5
+            with Dissolve(.5)
+
+            pause 6
 
             scene school a hallway st2 evening
             with Dissolve(.5)
@@ -871,5 +918,9 @@ label start:
             jump choice_done
 
         label choice_done:
+            scene end
+            with Dissolve(.5)
+
+            pause 20
             # This ends the game.
             return
